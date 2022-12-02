@@ -12,9 +12,6 @@ function App() {
     const [file1Data, setSecondFileData] = useState(null);
 
     const setData = (data) => {
-
-        console.log("will set Data");
-
         let {setFile0Data, file0_order_names , file0_order_average} = file0(data,file0Data,setFirstFileData);
         let {file1_orders, setFile1Data} = file1([])
 
@@ -30,7 +27,6 @@ function App() {
             file1_orders = setFile1Data(productName, brandName, file1_orders)
 
         })
-        console.log("file0_order_names", file0_order_names);
         setFirstFileData({names: file0_order_names, average: file0_order_average});
         setSecondFileData(file1_orders);
     }

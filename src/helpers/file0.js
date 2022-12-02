@@ -6,7 +6,6 @@ export default function file0(data){
     const file0_order_average = [];
 
     const setFile0Data = (productName, quantity) => {
-        console.log("will set 0")
         const orderIndex = file0_order_names.indexOf(productName);
         if (orderIndex === -1) {
             file0_order_names.push(productName)
@@ -17,6 +16,5 @@ export default function file0(data){
             file0_order_average[orderIndex] = file0_order_count[orderIndex] / totalOrdersCount;
         }
     }
-    console.log("file0_order_names", file0_order_names)
     return {setFile0Data, file0_order_names , file0_order_average};
 }

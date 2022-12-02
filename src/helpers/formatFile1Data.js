@@ -16,6 +16,7 @@ export default function formatFile1Data(file1Data){
                     formattedFile1BrandsSoldCount[existedIndex] = brand.soldCount;
                 }
             }
+            return brand;
         }))
         for(let i =0; i< formattedFile1Products.length ; i++)
             formattedFile1Data.push({'Product Name': formattedFile1Products[i],

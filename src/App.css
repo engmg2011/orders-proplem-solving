@@ -15,3 +15,7 @@ html{
   text-align: left;
   font-size: .8em;
 }
+.csv-upload .title{
+  font-weight: 800;
+  margin-bottom: 1em;
+}

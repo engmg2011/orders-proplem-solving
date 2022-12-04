@@ -1,8 +1,12 @@
 import React, {useEffect, useState} from 'react';
 
+/**
+ * Used papa parse package for fixing characters encoding issues and
+ * better performance in reading large files using chunking
+ */
 import {useCSVDownloader} from 'react-papaparse';
-import formatFile0Data from "../helpers/formatFile0Data";
-import formatFile1Data from "../helpers/formatFile1Data";
+import prepareDownloadFile0Data from "../helpers/prepareDownloadFile0Data";
+import prepareDownloadFile1Data from "../helpers/prepareDownloadFile1Data";
 
 
 export default function CSVDownloader({filename, file0Data, file1Data}) {
@@ -11,8 +15,8 @@ export default function CSVDownloader({filename, file0Data, file1Data}) {
     const [formattedFile1Data, setFormattedFile1Data] = useState(null);
 
     useEffect(function () {
-        setFormattedFile0Data(formatFile0Data(file0Data))
-        setFormattedFile1Data(formatFile1Data(file1Data));
+        setFormattedFile0Data(prepareDownloadFile0Data(file0Data))
+        setFormattedFile1Data(prepareDownloadFile1Data(file1Data));
     }, [file0Data, file1Data])
 
     return (<div className="downloader">

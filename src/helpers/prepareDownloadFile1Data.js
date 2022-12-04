@@ -1,4 +1,10 @@
-export default function formatFile1Data(file1Data){
+/**
+ * This method changes format of file 1 data and chooses the most sold
+ * @param file1Data ex: [{"name":"Intelligent Copper Knife","data":[{"brandName":"Hilll-Gorczany","soldCount":3}]},{"name":"Small Granite Shoes","data":[{"brandName":"Rowe and Legros","soldCount":1}]}]
+ * @returns ex: [{"Product Name":"Intelligent Copper Knife","Brand Name":"Hilll-Gorczany"},{"Product Name":"Small Granite Shoes","Brand Name":"Rowe and Legros"}]
+ */
+
+export default function prepareDownloadFile1Data(file1Data){
     let formattedFile1Data = [];
     let formattedFile1Products = [];
     let formattedFile1Brands = [];
